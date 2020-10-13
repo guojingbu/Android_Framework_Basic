@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        //可运行应用最低的API级别
+        minSdkVersion rootProject.android.minSdkVersion
+        //指定应用目标API级别
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api rootProject.depsLibs.appcompact
+    api rootProject.depsLibs.constraint
+    api rootProject.depsLibs.design
+    api rootProject.depsLibs.recyclerview
+    api rootProject.depsLibs.annotation
+    api rootProject.depsLibs.multidex
+    //-------第三方依赖库-------
+    api rootProject.depsLibs.eventbus
+    api rootProject.depsLibs.glide
+    api rootProject.depsLibs.cardview
+    api rootProject.depsLibs.arouterapi
+    api rootProject.depsLibs.rxpermission
+    api rootProject.depsLibs.badgeview
+    api rootProject.depsLibs.jiguang_jpush
+    api rootProject.depsLibs.jiguang_jcore
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    annotationProcessor rootProject.depsLibs.aroutercompiler
+    annotationProcessor rootProject.depsLibs.glidecompiler
+    api project(path: ':api_lib')
+    api project(path: ':picture_library')
+    api project(path: ':magicindicator')
+    api project(path: ':share_lib')
+    api project(path: ':statistics_lib')
+    api project(path: ':webview_lib')
+    api project(path: ':map_lib')
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_fragment_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_common_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:textColor="@color/common_item_value_color"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/txt_common_dialog_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/not_opend_notify_describe"
+        android:padding="@dimen/dp_20"
+        android:textColor="@color/common_item_name_color"
+        android:textSize="@dimen/sp_15"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/confirm_setting"
+            android:textColor="@color/green_8"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/grey_3" />
+
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:text="@string/not_notify_again"
+            android:textColor="@color/green_8"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:id="@+id/view_cancel_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/grey_3" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:text="@string/cancel"
+            android:textColor="@color/green_8"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</LinearLayout>

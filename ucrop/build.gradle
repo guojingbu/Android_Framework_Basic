@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+    defaultConfig {
+
+        //可运行应用最低的API级别
+        minSdkVersion rootProject.android.minSdkVersion
+        //指定应用目标API级别
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    resourcePrefix 'ucrop_'
+
+}
+
+dependencies {
+    implementation rootProject.depsLibs.appcompact
+    implementation rootProject.depsLibs.exifinterface
+    implementation rootProject.depsLibs.transition
+    implementation rootProject.depsLibs.recyclerview
+}

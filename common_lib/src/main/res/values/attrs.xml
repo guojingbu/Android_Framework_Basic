@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonItemView">
+        <attr name="left_icon" format="reference" />
+        <attr name="left_text" format="string" />
+        <attr name="left_text_size" format="dimension" />
+        <attr name="left_text_color" format="color" />
+        <attr name="left_icon_visible" format="boolean" />
+        <attr name="right_icon" format="reference" />
+        <attr name="right_text_color" format="color" />
+        <attr name="right_text_hint" format="string" />
+        <attr name="right_text_hint_color" format="color" />
+        <attr name="right_text" format="string" />
+        <attr name="right_text_size" format="dimension" />
+        <attr name="right_icon_visible" format="boolean" />
+        <attr name="right_text_visibility" format="boolean" />
+        <attr name="left_text_style" format="integer" />
+        <attr name="right_text_isSingleLine" format="boolean" />
+    </declare-styleable>
+    <!-- 自带阴影效果的设置通用view-->
+    <declare-styleable name="ShadowCommonItemView">
+        <attr name="shadow_left_icon" format="reference" />
+        <attr name="shadow_left_text" format="string" />
+        <attr name="shadow_left_text_size" format="dimension" />
+        <attr name="shadow_left_text_color" format="color" />
+        <attr name="shadow_left_icon_visible" format="boolean" />
+        <attr name="shadow_right_icon" format="reference" />
+        <attr name="shadow_right_text_color" format="color" />
+        <attr name="shadow_right_text_hint" format="string" />
+        <attr name="shadow_right_text_hint_color" format="color" />
+        <attr name="shadow_right_text" format="string" />
+        <attr name="shadow_right_text_size" format="dimension" />
+        <attr name="shadow_right_icon_visible" format="boolean" />
+        <attr name="shadow_right_text_visibility" format="boolean" />
+        <attr name="shadow_left_text_style" format="integer" />
+    </declare-styleable>
+    <!-- 自带阴影效果的设置通用view-->
+    <declare-styleable name="LCardView">
+        <attr name="leftShadowWidth" format="dimension" />
+        <attr name="topShadowHeight" format="dimension" />
+        <attr name="rightShadowWidth" format="dimension" />
+        <attr name="bottomShadowHeight" format="dimension" />
+        <attr name="shadowSize" format="dimension" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowStartAlpha" format="integer" />
+        <attr name="shadowFluidShape" format="enum">
+            <enum name="adsorption" value="0" />
+            <enum name="linear" value="1" />
+        </attr>
+        <attr name="cardBackgroundColor" format="color" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="leftTopCornerRadius" format="dimension" />
+        <attr name="rightTopCornerRadius" format="dimension" />
+        <attr name="leftBottomCornerRadius" format="dimension" />
+        <attr name="rightBottomCornerRadius" format="dimension" />
+        <attr name="elevation" format="dimension" />
+        <attr name="elevationAffectShadowColor" format="boolean" />
+        <attr name="elevationAffectShadowSize" format="boolean" />
+        <attr name="xOffset" format="dimension" />
+        <attr name="yOffset" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="InfoTextView">
+        <attr name="infoKey" format="reference|string" />
+        <attr name="infoValue" format="reference|string" />
+        <attr name="infoHint" format="reference|string" />
+        <attr name="infoKeyColor" format="reference|color" />
+        <attr name="infoValueColor" format="reference|color" />
+        <attr name="infoBottomColor" format="reference|color" />
+        <attr name="rightImgVisibility">
+            <enum name="VISIBLE" value="0x00000000" />
+            <enum name="INVISIBLE" value="0x00000004" />
+            <enum name="GONE" value="0x00000008" />
+        </attr>
+        <attr name="leftImgVisibility">
+            <enum name="VISIBLE" value="0x00000000" />
+            <enum name="INVISIBLE" value="0x00000004" />
+            <enum name="GONE" value="0x00000008" />
+        </attr>
+        <attr name="bottomImgVisibility">
+            <enum name="VISIBLE" value="0x00000000" />
+            <enum name="INVISIBLE" value="0x00000004" />
+            <enum name="GONE" value="0x00000008" />
+        </attr>
+        <attr name="leftImgSrc" format="reference" />
+        <attr name="rightImgSrc" format="reference" />
+    </declare-styleable>
+    <!--home banner 图属性-->
+    <attr name="interval" format="integer" />
+    <attr name="showIndicator" format="boolean" />
+    <attr name="orientation" format="enum">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+    <attr name="autoPlaying" format="boolean" />
+    <declare-styleable name="RecyclerViewBannerBase">
+        <attr name="interval" />
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying" />
+        <attr name="indicatorSelectedSrc" format="color|reference" />
+        <attr name="indicatorUnselectedSrc" format="color|reference" />
+        <attr name="indicatorSpace" format="dimension|reference" />
+        <attr name="indicatorMarginLeft" format="dimension|reference" />
+        <attr name="indicatorMarginRight" format="dimension|reference" />
+        <attr name="indicatorMarginBottom" format="dimension|reference" />
+        <attr name="indicatorGravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BannerLayout">
+        <attr name="interval" />
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying" />
+        <attr name="itemSpace" format="integer" />
+        <attr name="centerScale" format="float" />
+        <attr name="moveSpeed" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="NiceImageView">
+        <attr name="is_circle" format="boolean" />
+        <attr name="is_cover_src" format="boolean" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="corner_top_left_radius" format="dimension" />
+        <attr name="corner_top_right_radius" format="dimension" />
+        <attr name="corner_bottom_left_radius" format="dimension" />
+        <attr name="corner_bottom_right_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="inner_border_width" format="dimension" />
+        <attr name="inner_border_color" format="color" />
+        <attr name="mask_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DashView">
+        <attr name="dashWidth" format="dimension" />
+        <attr name="dashLineWidth" format="dimension" />
+        <attr name="dashLineHeight" format="dimension" />
+        <attr name="dashLineColor" format="color" />
+        <attr name="dashOrientation" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DropdownButton">
+        <attr name="margn_list" format="integer" />
+        <attr name="bottomVisibility">
+            <enum name="VISIBLE" value="0x00000000" />
+            <enum name="INVISIBLE" value="0x00000004" />
+            <enum name="GONE" value="0x00000008" />
+        </attr>
+    </declare-styleable>
+</resources>

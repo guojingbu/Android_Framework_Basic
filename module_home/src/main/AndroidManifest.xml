@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yesway.module_home">
+
+    <application android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.WebPageActivity"
+            android:theme="@style/AppTheme.BackBar"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true" />
+    </application>
+</manifest>

@@ -1,0 +1,3 @@
+include ':map_lib'
+include ':module_app', ':common_lib', ':api_lib', ':module_main', ':module_home', ':module_vehicle', ':module_me', ':module_message', ':share_lib', ':statistics_lib', ':webview_lib','picture_library',':ucrop',":magicindicator",":messagelibrary",":paysdk"
+rootProject.name='Android_Framework_Basic'

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_shape_white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_common_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_update_dailog_title_bg"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_50"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:text="@string/user_and_private_protocol"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/txt_common_dialog_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:textColor="@color/black_2"
+        android:textSize="@dimen/sp_15" />
+
+    <com.yesway.baselibrary.widget.DashView
+        style="@style/DashViewStyle"
+        android:layout_marginLeft="@dimen/dp_0"
+        android:layout_marginRight="@dimen/dp_0"
+        app:dashLineColor="@color/grey_1"
+        app:dashLineHeight="@dimen/dp_1"
+        app:dashLineWidth="2dp"
+        app:dashOrientation="0"
+        app:dashWidth="2dp" />
+
+    <TextView
+        android:id="@+id/tv_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_20"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/v2x_areement"
+        android:textColor="@color/green_8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/grey_3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_common_dialog_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/label_exit"
+            android:textColor="@color/green_8"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:id="@+id/view_halving_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_3" />
+
+        <Button
+            android:id="@+id/btn_common_dialog_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/label_agree"
+            android:textColor="@color/green_8"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</LinearLayout>

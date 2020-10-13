@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+
+android {
+    //本地开发环境中的编译版本
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        //指定应用目标API级别
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.depsLibs.appcompact
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //友盟sdk
+    api 'com.umeng.umsdk:common:2.2.5'
+    api 'com.umeng.umsdk:share-core:7.0.2'
+    api 'com.umeng.umsdk:share-board:7.0.2'
+    //三方分享平台
+    api 'com.umeng.umsdk:share-qq:7.0.2'
+    api 'com.umeng.umsdk:share-wx:7.0.2'
+    api 'com.umeng.umsdk:share-sina:7.0.2'
+}

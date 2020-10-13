@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="color_white">#ffffff</drawable>
+    <drawable name="placeholder">#F2F2F3</drawable>
+    <drawable name="time_picker_dim">#33000000</drawable>
+    <drawable name="transparent">#00000000</drawable>
+</resources>

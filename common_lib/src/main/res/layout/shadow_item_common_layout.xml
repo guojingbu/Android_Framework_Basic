@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yesway.baselibrary.widget.LCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cornerRadius="@dimen/dp_10"
+    app:shadowSize="@dimen/dp_5"
+    app:shadowFluidShape="linear"
+    app:shadowStartAlpha="255"
+    app:shadowColor="@color/shadow_color"
+    app:cardBackgroundColor="@color/white"
+    android:layout_gravity="center_vertical"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_item_view_bg"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawablePadding="@dimen/dp_12"
+        android:gravity="center_vertical"
+        android:textColor="@color/common_item_name_color"/>
+
+    <TextView
+        android:id="@+id/txt_value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/iv_arrow"
+        android:ellipsize="end"
+        android:gravity="right|center"
+        android:layout_marginRight="@dimen/dp_13"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dp_5"
+        android:textColor="@color/common_item_value_color" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/list_icon_into" />
+</RelativeLayout>
+</com.yesway.baselibrary.widget.LCardView>

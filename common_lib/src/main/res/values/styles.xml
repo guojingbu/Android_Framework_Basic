@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/green_8</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="toolbarStyle">@style/NoSpaceActionBarTheme</item>
+        <item name="android:textAppearanceButton">@style/myTextAppearanceButton</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="NoSpaceActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+
+    <style name="AppTheme.BackBar" parent="AppTheme">
+        <item name="navigationIcon">@drawable/call_back</item>
+        <item name="toolbarStyle">@style/NoSpaceActionBarTheme</item>
+    </style>
+    <!-- ToolBar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@color/menu_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TransparentToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@color/menu_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--防止英文状态下按钮文字都大写问题 -->
+    <style name="myTextAppearanceButton" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonBarTextBlack">
+        <item name="android:textColor">@drawable/btn_txt_black_selector</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="DividerViewDash">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@drawable/dash_line_stroke</item>
+        <item name="android:layout_marginLeft">@dimen/dp_13</item>
+        <item name="android:layout_marginRight">@dimen/dp_13</item>
+    </style>
+    <!--dashview 分隔线样式-->
+    <style name="DashViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/dp_13</item>
+        <item name="android:layout_marginRight">@dimen/dp_13</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="ViewDividerGreyVertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/dp_1</item>
+        <item name="android:background">@color/grey_1</item>
+    </style>
+
+    <style name="ViewDividerGreyHorizontal">
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/grey_13</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyleBlack2" parent="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="TextStyleGreen" parent="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/green_8</item>
+    </style>
+    <!--字体加粗颜色#333333样式-->
+    <style name="TextStyleBlodPrimary" parent="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextStyleWhite" parent="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="textStyleGold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/gold_2</item>
+    </style>
+
+    <style name="textStyleBlodBlack">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_2</item>
+    </style>
+
+    <style name="widget_purple_switch">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <!-- 此设置不需要文字，只显示背景图的开关 -->
+        <item name="android:textOff">""</item>
+        <item name="android:textOn">""</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <!-- 用来控制背景图片和文字之间的间距来控制switch整体宽度 -->
+        <item name="android:track">@drawable/switch_track</item>
+        <item name="android:switchMinWidth">50dp</item>
+    </style>
+
+    <style name="AnimationTopFade">
+        <item name="android:windowEnterAnimation">@anim/dropdown_in</item>
+        <item name="android:windowExitAnimation">@anim/dropdown_out</item>
+    </style>
+    <!-- 水平分割线 -->
+    <style name="HorDividerViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@drawable/drawable_divider_style</item>
+    </style>
+    <!--底部弹窗-->
+    <style name="BottomDialogStyle" parent="DialogStyle">
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/bottom_slidein</item>
+        <item name="android:windowExitAnimation">@anim/bottom_slideout</item>
+    </style>
+
+    <style name="DialogStyle" parent="@android:style/Theme.Holo.Light.DialogWhenLarge.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="clearEditTextStyle">
+        <item name="android:drawablePadding">@dimen/dp_5</item>
+        <item name="android:textColor">@color/black_2</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:paddingRight">@dimen/dp_10</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/dp_10</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--通用信息条-->
+    <style name="InfoTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="InfoTextValueStyle" parent="InfoTextStyle">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Animation.Design.TopSheetDialog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/top_slidein</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+
+    <style name="BtnStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:background">@drawable/shape_green_gradient_btn_bg</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+    <!-- 宽度是match_parent 的按钮样式-->
+    <style name="BtnStyleClickFull" parent="@style/BtnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:background">@drawable/ripple_bg</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+    <!-- 宽度是wrap_content 的按钮样式-->
+    <style name="BtnStyleClickWrap" parent="@style/BtnStyleClickFull">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:background">@drawable/ripple_bg</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+</resources>

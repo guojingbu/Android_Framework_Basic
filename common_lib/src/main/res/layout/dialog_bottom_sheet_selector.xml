@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_shape_white_bg"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/list_source"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:layout_marginTop="1dp"
+            android:choiceMode="singleChoice"
+            android:divider="@color/grey_3"
+            android:dividerHeight="@dimen/dp_1"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/common_shape_white_bg"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="@string/cancel"
+        android:textColor="@color/black_2"
+        android:textSize="@dimen/sp_13" />
+</LinearLayout>

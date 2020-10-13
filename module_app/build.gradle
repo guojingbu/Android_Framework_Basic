@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+def buildTime() {
+    return new Date().format("yyyyMMdd_HHmm")
+}
+
+android {
+    signingConfigs {
+
+        debug {
+            // MD5:  42:12:6E:7A:D2:3B:C7:AA:8B:E4:21:24:61:BA:21:AE
+            // SHA1: 4B:FD:3F:94:2A:DE:1C:93:50:12:B0:F0:24:07:FE:FE:92:4A:93:FF
+            storeFile file('../debug.keystore')
+            storePassword 'android'
+            keyAlias = 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        flavorDimensions "default"
+        applicationId rootProject.android.applicationId
+        //可运行应用最低的API级别
+        minSdkVersion rootProject.android.minSdkVersion
+        //指定应用目标API级别
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a','x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64','arm64-v8a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "d1629903ae293663e803d0a6", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                qqappid      : "100424468",//友盟分享qq平台appid
+                UMENG_APPKEY : "5ae2c51df43e48562b000164"
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false//启动代码混淆
+//            zipAlignEnabled true//Zipalign优化
+//            shrinkResources true// 移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    /*配置渠道*/
+    productFlavors {
+        huawei {
+        }
+        xiaomi {
+        }
+        yingyongbao {
+        }
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "Android_Framework_Basic${versionName}_${buildTime()}_${versionCode}.apk"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.depsLibs.appcompact
+    implementation rootProject.depsLibs.constraint
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: ':common_lib')
+    if (!isModule.toBoolean()) {
+        implementation project(':module_main')
+        implementation project(':module_home')
+        implementation project(':module_me')
+        implementation project(':module_vehicle')
+        implementation project(':module_message')
+    }
+}

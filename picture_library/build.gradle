@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+ compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+    defaultConfig {
+
+        //可运行应用最低的API级别
+        minSdkVersion rootProject.android.minSdkVersion
+        //指定应用目标API级别
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.depsLibs.appcompact
+    implementation rootProject.depsLibs.recyclerview
+    implementation rootProject.depsLibs.futurer
+    implementation rootProject.depsLibs.okio
+    implementation rootProject.depsLibs.camerax
+    implementation rootProject.depsLibs.localbroadcastmanager
+    implementation rootProject.depsLibs.camerax_view
+    api project(':ucrop')
+}

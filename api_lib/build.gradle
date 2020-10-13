@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+    defaultConfig {
+        //可运行应用最低的API级别
+        minSdkVersion rootProject.android.minSdkVersion
+        //指定应用目标API级别
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        if (isPublish.toBoolean()) {
+            buildConfigField "String","URL_HOST",'"http://"'
+        }else{
+            buildConfigField "String","URL_HOST",'"http://10.1.11.195/"'
+        }
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+}
+greendao {
+    schemaVersion 3//数据库版本号
+    daoPackage 'com.yesway.api_lib.db.greendao'//设置DaoMaster、DaoSession、Dao包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    //targetGenDirTest：设置生成单元测试目录
+    //generateTests：设置自动生成单元测试用例
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation  rootProject.depsLibs.appcompact
+    api rootProject.depsLibs.rxlifecycle
+    api rootProject.depsLibs.rxlifecycle_android
+    api rootProject.depsLibs.rxlifecycle_components
+    api rootProject.depsLibs.rxjava2
+    api rootProject.depsLibs.rxandroid
+    api rootProject.depsLibs.retrofit2_rxjava2
+    api rootProject.depsLibs.converter_gson
+    api rootProject.depsLibs.logging_interceptor
+    implementation rootProject.depsLibs.arouterapi
+    implementation rootProject.depsLibs.greendaoupgradehelper
+    api rootProject.depsLibs.greendao
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_18"
+    android:paddingRight="@dimen/dp_18">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_shape_white_bg"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_common_select_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black_2"
+            android:text="@string/select_phonto"
+            android:textSize="@dimen/sp_13"  />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/grey_3" />
+        <Button
+            android:id="@+id/btn_common_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black_2"
+            android:padding="@dimen/dp_13"
+            android:text="@string/take_photo"
+            android:textSize="@dimen/sp_13"  />
+        <View
+            android:id="@+id/view_second_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/grey_3" />
+        <Button
+            android:id="@+id/btn_big_picture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:textAllCaps="false"
+            android:minHeight="0dp"
+            android:textColor="@color/black_2"
+            android:padding="@dimen/dp_13"
+            android:text="@string/check_big_picture"
+            android:textSize="@dimen/sp_13"  />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_common_photo_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:textColor="@color/black_2"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/common_shape_white_bg"
+        android:text="@string/cancel"
+        android:textSize="@dimen/sp_13" />
+</LinearLayout>

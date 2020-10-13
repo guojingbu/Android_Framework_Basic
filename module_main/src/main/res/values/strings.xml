@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">module_main</string>
+
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="experience_immediately">立即体验</string>
+    <string name="module_home">首页</string>
+    <string name="module_vehicle">车辆</string>
+    <string name="module_me">我的</string>
+</resources>

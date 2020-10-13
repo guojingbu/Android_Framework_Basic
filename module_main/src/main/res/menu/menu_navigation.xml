@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navi_home"
+        android:checked="true"
+        android:icon="@drawable/bottom_home"
+        android:title="@string/module_home" />
+
+    <item
+        android:id="@+id/navi_vehicle"
+        android:icon="@drawable/bottom_vehicle"
+        android:title="@string/module_vehicle" />
+
+    <item
+        android:id="@+id/navi_me"
+        android:icon="@drawable/bottom_me"
+        android:title="@string/module_me" />
+</menu>
